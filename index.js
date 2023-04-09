@@ -7,10 +7,10 @@ movieSearchForm.addEventListener("submit", (event) => {
     const movieName = movieInput.value
     console.log(movieName)
 
-    fetch(`http://www.omdbapi.com/?t=${movieName}&y=2023&apikey=${apiKey}`)
+    fetch(`http://www.omdbapi.com/?s=Batman&page=2&apikey=${apiKey}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data.Poster)
+        console.log(data)
   }
     )
 })
