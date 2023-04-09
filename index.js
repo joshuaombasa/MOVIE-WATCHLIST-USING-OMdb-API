@@ -13,17 +13,23 @@ movieSearchForm.addEventListener("submit", (event) => {
         console.log(data.Search.length)
         const movies = data.Search.slice(0,3)
         console.log(movies)
-  }
-    )
-})
 
-const movies = 
-`
+       
+
+
+
+let html = []
+
+for (let i=0; i<movies.length; i++) {
+    html.push(
+        `
 <div class="movie-container">
-                <div class="movie-poster"></div>
+                <div class="movie-poster">
+                <img class="movie-poster-img" src="${movies[i].Poster}" />
+                </div>
                 <div class="movie-text">
                     <div class="movie-meta">
-                        <h4>John Wick</h4>
+                        <h4>${movies[i].Title}</h4>
                         <small>⭐ 8.0</small>
                     </div>
                     <div class="movie-stats">
@@ -38,13 +44,18 @@ const movies =
                 </div>
             </div>
 `
-
-// let html = []
-
-// for (let i=0; i<3; i++) {
-//     html.push(movies)
-// }
+    )
+}
 
 
 
-// document.getElementById("top-main").innerHTML = html.join("")
+document.getElementById("top-main").innerHTML = html.join("")
+  }
+
+  
+    )
+})
+
+
+
+
