@@ -118,12 +118,10 @@ input:focus {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 1px solid black;
     gap: 20px;
   }
 
   .movie-poster {
-    border: 1px solid gold;
     width: 99px;
     height: 147.41px;
     border-radius: 2.32941px;
@@ -182,4 +180,9 @@ small {
     color: #6B7280;
     font-weight: 400;
     font-size: 14px;
+}
+
+.movie-poster-img {
+    width: 100%;
+    border-radius: 2.32941px;
 }
