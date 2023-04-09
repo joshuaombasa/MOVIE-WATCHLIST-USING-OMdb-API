@@ -10,7 +10,9 @@ movieSearchForm.addEventListener("submit", (event) => {
     fetch(`http://www.omdbapi.com/?s=${movieName}&page=2&apikey=${apiKey}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+        console.log(data.Search.length)
+        const movies = data.Search.slice(0,3)
+        console.log(movies)
   }
     )
 })
@@ -37,12 +39,12 @@ const movies =
             </div>
 `
 
-let html = []
+// let html = []
 
-for (let i=0; i<3; i++) {
-    html.push(movies)
-}
+// for (let i=0; i<3; i++) {
+//     html.push(movies)
+// }
 
 
 
-document.getElementById("top-main").innerHTML = html.join("")
+// document.getElementById("top-main").innerHTML = html.join("")
