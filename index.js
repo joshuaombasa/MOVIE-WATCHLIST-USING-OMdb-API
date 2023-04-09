@@ -11,14 +11,8 @@ movieSearchForm.addEventListener("submit", (event) => {
     .then(res => res.json())
     .then(data => {
         console.log(data)
-        // const movies = data.Search.slice(0,3)
-        // console.log(movies)
-
-
-        // `http://www.omdbapi.com/?t=${movieName}&plot=full&apikey=${apiKey}`
-       
-
-
+        const movies = data.Search.slice(0,3)
+        console.log(movies)
 
 // let html = []
 
