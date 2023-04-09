@@ -7,10 +7,42 @@ movieSearchForm.addEventListener("submit", (event) => {
     const movieName = movieInput.value
     console.log(movieName)
 
-    fetch(`http://www.omdbapi.com/?s=Batman&page=2&apikey=${apiKey}`)
+    fetch(`http://www.omdbapi.com/?s=${movieName}&page=2&apikey=${apiKey}`)
     .then(res => res.json())
     .then(data => {
         console.log(data)
   }
     )
 })
+
+const movies = 
+`
+<div class="movie-container">
+                <div class="movie-poster"></div>
+                <div class="movie-text">
+                    <div class="movie-meta">
+                        <h4>John Wick</h4>
+                        <small>⭐ 8.0</small>
+                    </div>
+                    <div class="movie-stats">
+                        <small>117 Min</small>
+                        <small>Action, drama, sci-fi</small>
+                        <div class="btn-contaier">
+                            <button class="add-to-watchList-btn">+</button>
+                        </div>
+                        <small>watchlist</small>
+                    </div>
+                    <small class="movie-desc">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</small>
+                </div>
+            </div>
+`
+
+let html = []
+
+for (let i=0; i<3; i++) {
+    html.push(movies)
+}
+
+
+
+document.getElementById("top-main").innerHTML = html.join("")
