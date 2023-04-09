@@ -34,7 +34,7 @@ for (let i=0; i<movies.length; i++) {
                     </div>
                     <div class="movie-stats">
                         <small>117 Min</small>
-                        <small>Action, drama, sci-fi</small>
+                        <small>${movies[i].Type}</small>
                         <div class="btn-contaier">
                             <button class="add-to-watchList-btn">+</button>
                         </div>
