@@ -59,6 +59,12 @@ keys = Object.keys(localStorage)
 
     document.getElementById("remove-from-watchList-btn").addEventListener("click", (event) => {
         console.log(event.target.parentNode.id)
-        window.localStorage.removeItem('movie');
-        // window.location.reload()
+
+        const itemToRemoveFromLocalStorage = movies.filter((movie) => {
+            return movie.imdbID === event.target.parentNode.id ? movie : ''
+        })
+
+        console.log(itemToRemoveFromLocalStorage[0].Title)
+        window.localStorage.removeItem(itemToRemoveFromLocalStorage[0].Title);
+        window.location.reload()
     })
