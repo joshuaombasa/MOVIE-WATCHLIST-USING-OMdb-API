@@ -39,7 +39,7 @@ for (let i=0; i<movies.length; i++) {
                         <small>watchlist</small>
                     </div>
                     <details>
-                    <summary>Read more</summary>
+                    <summary>${movies[i].Plot.slice(0,50)}... Read more</summary>
                         <small class="movie-desc">${movies[i].Plot}</small>
                     </details>
                 </div>
