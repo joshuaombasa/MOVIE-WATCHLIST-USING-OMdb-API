@@ -51,6 +51,8 @@ storedMovieSearchForm.addEventListener("submit", (event) => {
 
     document.getElementById("remove-from-watchList-btn").addEventListener("click", () => {
         console.log("remove stuff")
+        window.localStorage.removeItem('movie');
+        window.location.reload()
     })
 })
 
