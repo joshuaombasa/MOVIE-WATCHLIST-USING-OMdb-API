@@ -7,11 +7,12 @@ movieSearchForm.addEventListener("submit", (event) => {
     const movieName = movieInput.value
     console.log(movieName)
 
-    fetch(`http://www.omdbapi.com/?s=${movieName}&plot=full&apikey=${apiKey}&page=2`)
+    fetch(`http://www.omdbapi.com/?t=${movieName}&plot=full&apikey=${apiKey}&page=2`)
     .then(res => res.json())
     .then(data => {
         console.log(data)
-        const movies = data.Search.slice(0,3)
+        const movies = []
+        movies.push(data)
         console.log(movies)
 
 let html = []
@@ -26,10 +27,11 @@ for (let i=0; i<movies.length; i++) {
                 <div class="movie-text">
                     <div class="movie-meta">
                         <h4>${movies[i].Title}</h4>
-                        <small>⭐ 8.0</small>
+                        <small>⭐ ${movies[i].imdbRating
+                        }</small>
                     </div>
                     <div class="movie-stats">
-                        <small>117 Min</small>
+                        <small>${movies[i].Runtime}</small>
                         <small>${movies[i].Type}</small>
                         <div class="btn-contaier">
                             <button class="add-to-watchList-btn">+</button>
