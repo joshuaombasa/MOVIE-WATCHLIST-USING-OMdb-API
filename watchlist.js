@@ -4,7 +4,7 @@ const storedMovieInput = document.getElementById("stored-movie-input")
 storedMovieSearchForm.addEventListener("submit", (event) => {
     event.preventDefault()
     const movies = JSON.parse(window.localStorage.getItem('movie'))
-    console.log(storedMovie)
+    console.log(movies)
     console.log("Hello from watchlist")
 
     let html = []
