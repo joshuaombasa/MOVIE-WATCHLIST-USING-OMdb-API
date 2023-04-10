@@ -38,7 +38,10 @@ for (let i=0; i<movies.length; i++) {
                         </div>
                         <small>watchlist</small>
                     </div>
-                    <small class="movie-desc">${movies[i].Plot}</small>
+                    <details>
+                    <summary>Read more</summary>
+                        <small class="movie-desc">${movies[i].Plot}</small>
+                    </details>
                 </div>
             </div>
 `
