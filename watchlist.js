@@ -48,4 +48,9 @@ storedMovieSearchForm.addEventListener("submit", (event) => {
     console.log(html)
 
     document.getElementById("watchlist-top-main").innerHTML = html.join("")
+
+    document.getElementById("remove-from-watchList-btn").addEventListener("click", () => {
+        console.log("remove stuff")
+    })
 })
+
