@@ -13,14 +13,15 @@ movieSearchForm.addEventListener("submit", (event) => {
         console.log(data)
         const movies = []
         movies.push(data)
+        window.localStorage.setItem('movie', `Josua Ombasa`);
         console.log(movies)
 
-let html = []
+        let html = []
 
-for (let i=0; i<movies.length; i++) {
-    html.push(
+        for (let i=0; i<movies.length; i++) {
+            html.push(
         `
-<div class="movie-container">
+        <div class="movie-container">
                 <div class="movie-poster">
                 <img class="movie-poster-img" src="${movies[i].Poster}" />
                 </div>
@@ -44,14 +45,14 @@ for (let i=0; i<movies.length; i++) {
                     </details>
                 </div>
             </div>
-`
-    )
-}
+        `
+            )
+        }
 
 
 
-document.getElementById("top-main").innerHTML = html.join("")
-  }
+        document.getElementById("top-main").innerHTML = html.join("")
+          }
 
   
     )
