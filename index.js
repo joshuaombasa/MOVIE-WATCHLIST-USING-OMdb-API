@@ -38,7 +38,7 @@ for (let i=0; i<movies.length; i++) {
                         </div>
                         <small>watchlist</small>
                     </div>
-                    <small class="movie-desc">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</small>
+                    <small class="movie-desc">${movies[i].Plot}</small>
                 </div>
             </div>
 `
