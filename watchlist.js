@@ -4,14 +4,17 @@ const storedMovieInput = document.getElementById("stored-movie-input")
 storedMovieSearchForm.addEventListener("submit", (event) => {
     event.preventDefault()
     
-    keys = Object.keys(localStorage)
-    const storedItems = []
+    
+})
+
+keys = Object.keys(localStorage)
+    const movies = []
 
     for (let key of keys) {
-        storedItems.push(JSON.parse(window.localStorage.getItem(key)))
+        movies.push(JSON.parse(window.localStorage.getItem(key)))
     }
 
-    console.log(storedItems)
+    console.log(movies)
     
 
     let html = []
@@ -58,5 +61,3 @@ storedMovieSearchForm.addEventListener("submit", (event) => {
         window.localStorage.removeItem('movie');
         window.location.reload()
     })
-})
-
