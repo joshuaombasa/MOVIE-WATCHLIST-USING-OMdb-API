@@ -28,10 +28,12 @@ storedMovieSearchForm.addEventListener("submit", (event) => {
                 <div class="movie-stats">
                     <small>${movies[i].Runtime}</small>
                     <small>${movies[i].Type}</small>
-                    <div class="btn-contaier">
-                        <button class="add-to-watchList-btn">-</button>
+                    <div class="small-container">
+                        <div class="btn-contaier">
+                           <button class="add-to-watchList-btn" id="remove-from-watchList-btn">-</button>
+                        </div>
+                        <label for="remove-from-watchList-btn">Remove</label>
                     </div>
-                    <small>Remove</small>
                 </div>
                 <details>
                 <summary>${movies[i].Plot.slice(0,50)}... Read more</summary>
