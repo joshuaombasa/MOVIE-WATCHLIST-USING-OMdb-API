@@ -190,3 +190,9 @@ small {
 summary {
     font-size: 12px;
 }
+
+.small-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
