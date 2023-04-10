@@ -36,7 +36,8 @@ keys = Object.keys(localStorage)
                     <small>${movies[i].Runtime}</small>
                     <small>${movies[i].Type}</small>
                     <div class="small-container">
-                        <div class="btn-contaier">
+                        <div class="btn-contaier" id="${movies[i].imdbID
+                        }">
                            <button class="add-to-watchList-btn" id="remove-from-watchList-btn">-</button>
                         </div>
                         <label for="remove-from-watchList-btn">Remove</label>
@@ -56,8 +57,8 @@ keys = Object.keys(localStorage)
 
     document.getElementById("watchlist-top-main").innerHTML = html.join("")
 
-    document.getElementById("remove-from-watchList-btn").addEventListener("click", () => {
-        console.log("remove stuff")
+    document.getElementById("remove-from-watchList-btn").addEventListener("click", (event) => {
+        console.log(event.target.parentNode.id)
         window.localStorage.removeItem('movie');
-        window.location.reload()
+        // window.location.reload()
     })
