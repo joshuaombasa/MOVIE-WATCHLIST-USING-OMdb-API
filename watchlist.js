@@ -3,9 +3,12 @@ const storedMovieInput = document.getElementById("stored-movie-input")
 
 storedMovieSearchForm.addEventListener("submit", (event) => {
     event.preventDefault()
-    const movies = JSON.parse(window.localStorage.getItem('movie'))
+    
+    let movies = []
+    const moviesStored = JSON.parse(window.localStorage.getItem('movie'))
+    movies.push(moviesStored)
     console.log(movies)
-    console.log("Hello from watchlist")
+    
 
     let html = []
 
@@ -40,7 +43,7 @@ storedMovieSearchForm.addEventListener("submit", (event) => {
         )
     }
 
+    console.log(html)
 
-
-    document.getElementById("top-main").innerHTML = html.join("")
+    document.getElementById("watchlist-top-main").innerHTML = html.join("")
 })
