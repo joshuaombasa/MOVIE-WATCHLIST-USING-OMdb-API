@@ -13,7 +13,7 @@ movieSearchForm.addEventListener("submit", (event) => {
         console.log(data)
         const movies = []
         movies.push(data)
-        window.localStorage.setItem('movie', JSON.stringify(data));
+        
         
 
         let html = []
@@ -54,6 +54,13 @@ movieSearchForm.addEventListener("submit", (event) => {
 
 
         document.getElementById("top-main").innerHTML = html.join("")
+
+        document.getElementById("add-to-watchList-btn").addEventListener("click", () => {
+            window.localStorage.setItem(`${data.Title}`, JSON.stringify(data));
+            
+        })
+
+        movieSearchForm.reset()
           }
 
   
