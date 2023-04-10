@@ -13,8 +13,9 @@ movieSearchForm.addEventListener("submit", (event) => {
         console.log(data)
         const movies = []
         movies.push(data)
-        window.localStorage.setItem('movie', `Josua Ombasa`);
-        console.log(movies)
+        window.localStorage.setItem('movie', JSON.stringify(data));
+        const storedMovie = JSON.parse(window.localStorage.getItem('movie'))
+        console.log(storedMovie)
 
         let html = []
 
