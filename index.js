@@ -34,7 +34,7 @@ movieSearchForm.addEventListener("submit", (event) => {
                     <div class="movie-stats">
                         <small>${movies[i].Runtime}</small>
                         <small>${movies[i].Type}</small>
-                        <div>
+                        <div class="small-container">
                           <div class="btn-contaier">
                                 <button class="add-to-watchList-btn" id="add-to-watchList-btn">+</button>
                             </div>
