@@ -57,7 +57,7 @@ movieSearchForm.addEventListener("submit", (event) => {
 
         document.getElementById("add-to-watchList-btn").addEventListener("click", () => {
             window.localStorage.setItem(`${data.Title}`, JSON.stringify(data));
-            
+            window.location.reload()
         })
 
         movieSearchForm.reset()
