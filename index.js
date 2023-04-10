@@ -14,8 +14,7 @@ movieSearchForm.addEventListener("submit", (event) => {
         const movies = []
         movies.push(data)
         window.localStorage.setItem('movie', JSON.stringify(data));
-        const storedMovie = JSON.parse(window.localStorage.getItem('movie'))
-        console.log(storedMovie)
+        
 
         let html = []
 
